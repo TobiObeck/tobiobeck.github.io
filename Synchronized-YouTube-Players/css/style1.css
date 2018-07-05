@@ -1,0 +1,58 @@
+@keyframes example {
+    from {	margin-left: 0px;}
+    to {	margin-left: 1000px;}
+}
+
+.animate{
+    -webkit-animation-name: example; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+    animation-name: example;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#dach{	
+	width: 80px;
+	height: 30px;
+}
+
+#unterboden{
+	width: 100px;
+	height: 20px;
+}
+
+.rot{
+	//background-color: red !important;
+}
+
+#rad1{
+	float: left;
+	margin-left: 5px;
+	width: 10px;
+	height: 10px;
+	background-color: black;
+}
+
+#tanja > * {
+	background-color: #00DD00 ;
+}
+
+#auto2 > *{
+	/*reifen auch yellow, weil dieser Code unter rad1*/
+	background-color: yellow;	
+}
+
+#rad2{
+	margin-left: 80px;
+	width: 10px;
+	height: 10px;
+	background-color: black;
+}
+
+#auto2{
+	position:absolute;
+}
+
