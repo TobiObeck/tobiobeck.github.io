@@ -1,27 +1,75 @@
 <!DOCTYPE html>
-	<html lang="de">
-	<head>
-		<meta charset="UTF-8">		
-		<title>NEU</title>	
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>How to Control YouTube's Video Player with JavaScript</title>
+    <link rel="stylesheet" href="demo.css" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-		<!--scripts-->
-		<script type="text/javascript" src="//www.youtube.com/player_api"></script>
-		<script src="js/jquery.min.js"></script>
-		<!--<script src="js/jquery-1.11.3.min.js"></script>-->
-		<script src="js/bootstrap.min.js"></script>		
-		<script src="js/script1.js"></script>
-		<!--styles-->
-		<link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
-		<link href="css/style1.css" type="text/css" rel="stylesheet">
-	</head>
-	<body>
-		<div id="content">
-			<h1>2 synchronized Youtube videos</h1>	
-			<!-- sweet dreams + seven nation army = Sweet Dreams are Made of Seven Nation Army -->
-			<iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/hT5eJwgAtvY?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
-			<iframe id="video2" width="560" height="315" src="https://www.youtube.com/embed/watch?v=qeMFqkcPYcg?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
-			<button id="playBtn">PLAY </button>
-			<button id="pauseBtn">PAUSE </button>
-		</div>
-	</body>
-</html> 
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/styles/default.min.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/styles/tomorrow.min.css">
+
+</head>
+<body>
+
+<a href="http://tutorialzine.com/2015/08/how-to-control-youtubes-video-player-with-javascript/">Download</a>
+
+<div id="video-placeholder1"></div>
+<div id="video-placeholder2"></div>
+
+<div id="controls">  
+    <h2>Duration</h2>
+    <p><span id="current-time">0:00</span> / <span id="duration">0:00</span></p>
+    <p><span id="current-time2">0:00</span> / <span id="duration2">0:00</span></p>
+
+    <h2>Progress Bar</h2>
+    <input id="progress-bar" class="progress-bars" value="0" type="range">
+    <button id="plus">+</button>
+    <button id="minus">-</button>
+    <input id="progress-bar2" class="progress-bars" value="0" type="range">
+    <button id="plus2">+</button>
+    <button id="minus2">-</button>
+
+    <i id="play" class="material-icons">play_arrow</i>
+
+    <h2>Pause</h2>
+    <i id="pause" class="material-icons">pause</i>
+
+    <h2>Set volume</h2>
+    <input id="volume-input" type="number" max="100" min="0">
+    <input id="volume-input2" type="number" max="100" min="0">
+
+    <h2>Speed</h2>
+    <select id="speed">
+        <option>0.25</option>
+        <option>0.5</option>
+        <option selected="selected">1</option>
+        <option>1.5</option>
+    <option>2</option>
+    </select>
+
+    <h2>Quality</h2>
+    <select id="quality">
+        <option>small</option>
+        <option>medium</option>
+        <option selected="selected">large</option>
+        <option>hd720</option>
+        <option>hd1080</option>
+    <option>highres</option>
+    </select>
+
+    <h2>Playlist Next</h2>
+    <i id="next" class="material-icons">fast_forward</i>
+
+    <h2>Dynamically Queue Video</h2>
+    <img class="thumbnail" src="images/cat_video_1.jpg" data-video-id="h14wr4pXZFk">
+    <img class="thumbnail" src="images/cat_video_2.jpg" data-video-id="KkFnm-7jzOA">
+    <img class="thumbnail" src="images/cat_video_3.jpg" data-video-id="Ph77yOQFihc">
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script>
+<script src="https://www.youtube.com/iframe_api"></script>
+<script src="script.js"></script>
+</body>
+</html>
